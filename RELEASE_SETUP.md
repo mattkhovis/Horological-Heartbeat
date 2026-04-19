@@ -2,36 +2,9 @@
 
 This project can be distributed as a standalone app. End users do **not** need Xcode.
 
-The workflow at `.github/workflows/release.yml` builds and signs the app, notarizes it with Apple, creates a DMG, and uploads release assets to GitHub Releases.
+The workflow at `.github/workflows/release.yml` builds the app without code signing and uploads a `.zip` to GitHub Releases. No Apple Developer account is required.
 
-## 1. Apple Requirements
-
-1. Enroll in Apple Developer Program.
-2. Create a **Developer ID Application** certificate in Apple Developer account.
-3. Export that certificate from Keychain Access as `.p12` with a password.
-4. Create an app-specific password for your Apple ID.
-
-## 2. Add GitHub Secrets
-
-Add these repository secrets:
-
-- `APPLE_TEAM_ID`: Your Apple Developer Team ID.
-- `APPLE_ID`: Apple ID email used for notarization.
-- `APPLE_APP_SPECIFIC_PASSWORD`: App-specific password for notarization.
-- `APPLE_DEVELOPER_ID_APPLICATION`: Full signing identity string.
-  - Example: `Developer ID Application: Your Name (TEAMID)`
-- `APPLE_DEVELOPER_ID_P12_BASE64`: Base64 content of the exported `.p12`.
-- `APPLE_DEVELOPER_ID_P12_PASSWORD`: Password used when exporting the `.p12`.
-
-To generate the base64 string locally:
-
-```sh
-base64 -i developer_id_application.p12 | pbcopy
-```
-
-Then paste clipboard contents into `APPLE_DEVELOPER_ID_P12_BASE64`.
-
-## 3. Create a Release
+## 1. Create a Release
 
 Push a semver-like tag:
 
@@ -42,19 +15,18 @@ git push origin v1.0.0
 
 The workflow will:
 
-1. Build archive in Release mode
-2. Sign app with your Developer ID certificate
-3. Notarize app and DMG
-4. Staple notarization tickets
-5. Upload `.dmg` and `.zip` to a GitHub Release
+1. Build the archive in Release mode (unsigned)
+2. Package the `.app` into a `.zip`
+3. Upload the `.zip` to a GitHub Release
 
-## 4. Verify Downloaded Artifact
+## 2. User Note: macOS Gatekeeper
 
-After downloading the DMG, verify notarization:
+Because the app is unsigned, macOS Gatekeeper will block it on first launch with a "cannot be opened because the developer cannot be verified" message. Users can bypass this in one of two ways:
 
-```sh
-spctl -a -vv -t install /path/to/Horological\ Heartbeat.dmg
-```
+- **Right-click the app → Open**, then click **Open** in the dialog.
+- Go to **System Settings → Privacy & Security** and click **Open Anyway** after the first blocked attempt.
+
+This is a one-time step per installation.
 
 ## Notes
 
