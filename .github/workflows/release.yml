@@ -23,6 +23,7 @@ jobs:
       CODESIGN_IDENTITY: ${{ secrets.APPLE_DEVELOPER_ID_APPLICATION }}
       CERT_P12_BASE64: ${{ secrets.APPLE_DEVELOPER_ID_P12_BASE64 }}
       CERT_PASSWORD: ${{ secrets.APPLE_DEVELOPER_ID_P12_PASSWORD }}
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
@@ -32,6 +33,19 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
+          if [[ -z "$CERT_P12_BASE64" ]]; then
+            echo "::error::Secret APPLE_DEVELOPER_ID_P12_BASE64 is not configured. Please add the required Apple signing certificate secrets to this repository."
+            exit 1
+          fi
+          if [[ -z "$CERT_PASSWORD" ]]; then
+            echo "::error::Secret APPLE_DEVELOPER_ID_P12_PASSWORD is not configured. Please add the required Apple signing certificate secrets to this repository."
+            exit 1
+          fi
+          if [[ -z "$TEAM_ID" ]]; then
+            echo "::error::Secret APPLE_TEAM_ID is not configured. Please add the required Apple signing certificate secrets to this repository."
+            exit 1
+          fi
 
           KEYCHAIN_PATH="$RUNNER_TEMP/app-signing.keychain-db"
           KEYCHAIN_PASSWORD="$(openssl rand -base64 24)"
