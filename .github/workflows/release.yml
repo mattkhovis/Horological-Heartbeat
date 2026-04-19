@@ -17,49 +17,11 @@ jobs:
       APP_NAME: Horological Heartbeat
       SCHEME: HorologicalHeartbeat
       PROJECT_PATH: HorologicalHeartbeat.xcodeproj
-      TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-      APPLE_ID: ${{ secrets.APPLE_ID }}
-      APP_SPECIFIC_PASSWORD: ${{ secrets.APPLE_APP_SPECIFIC_PASSWORD }}
-      CODESIGN_IDENTITY: ${{ secrets.APPLE_DEVELOPER_ID_APPLICATION }}
-      CERT_P12_BASE64: ${{ secrets.APPLE_DEVELOPER_ID_P12_BASE64 }}
-      CERT_PASSWORD: ${{ secrets.APPLE_DEVELOPER_ID_P12_PASSWORD }}
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Import signing certificate
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          if [[ -z "$CERT_P12_BASE64" ]]; then
-            echo "::error::Secret APPLE_DEVELOPER_ID_P12_BASE64 is not configured. Please add the required Apple signing certificate secrets to this repository."
-            exit 1
-          fi
-          if [[ -z "$CERT_PASSWORD" ]]; then
-            echo "::error::Secret APPLE_DEVELOPER_ID_P12_PASSWORD is not configured. Please add the required Apple signing certificate secrets to this repository."
-            exit 1
-          fi
-          if [[ -z "$TEAM_ID" ]]; then
-            echo "::error::Secret APPLE_TEAM_ID is not configured. Please add the required Apple signing certificate secrets to this repository."
-            exit 1
-          fi
-
-          KEYCHAIN_PATH="$RUNNER_TEMP/app-signing.keychain-db"
-          KEYCHAIN_PASSWORD="$(openssl rand -base64 24)"
-          CERT_PATH="$RUNNER_TEMP/cert.p12"
-
-          echo "$CERT_P12_BASE64" | base64 --decode > "$CERT_PATH"
-
-          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
-          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
-          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
-          security import "$CERT_PATH" -k "$KEYCHAIN_PATH" -P "$CERT_PASSWORD" -A -T /usr/bin/codesign
-          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
-          security list-keychains -d user -s "$KEYCHAIN_PATH"
-          security find-identity -v -p codesigning "$KEYCHAIN_PATH"
 
       - name: Build archive
         shell: bash
@@ -71,12 +33,10 @@ jobs:
             -scheme "$SCHEME" \
             -configuration Release \
             -archivePath "$RUNNER_TEMP/$SCHEME.xcarchive" \
-            DEVELOPMENT_TEAM="$TEAM_ID" \
-            CODE_SIGN_STYLE=Manual \
-            CODE_SIGN_IDENTITY="$CODESIGN_IDENTITY" \
+            CODE_SIGNING_ALLOWED=NO \
             archive
 
-      - name: Package app for notarization
+      - name: Package app
         shell: bash
         run: |
           set -euo pipefail
@@ -91,45 +51,9 @@ jobs:
 
           ditto -c -k --sequesterRsrc --keepParent "$APP_PATH" "dist/$APP_NAME.zip"
 
-      - name: Notarize and staple app
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          xcrun notarytool submit "dist/$APP_NAME.zip" \
-            --apple-id "$APPLE_ID" \
-            --password "$APP_SPECIFIC_PASSWORD" \
-            --team-id "$TEAM_ID" \
-            --wait
-
-          xcrun stapler staple "$RUNNER_TEMP/$SCHEME.xcarchive/Products/Applications/$APP_NAME.app"
-
-      - name: Create and notarize DMG
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          APP_PATH="$RUNNER_TEMP/$SCHEME.xcarchive/Products/Applications/$APP_NAME.app"
-
-          hdiutil create \
-            -volname "$APP_NAME" \
-            -srcfolder "$APP_PATH" \
-            -ov \
-            -format UDZO \
-            "dist/$APP_NAME.dmg"
-
-          xcrun notarytool submit "dist/$APP_NAME.dmg" \
-            --apple-id "$APPLE_ID" \
-            --password "$APP_SPECIFIC_PASSWORD" \
-            --team-id "$TEAM_ID" \
-            --wait
-
-          xcrun stapler staple "dist/$APP_NAME.dmg"
-
       - name: Upload release artifacts
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            dist/Horological Heartbeat.dmg
             dist/Horological Heartbeat.zip
           generate_release_notes: true
