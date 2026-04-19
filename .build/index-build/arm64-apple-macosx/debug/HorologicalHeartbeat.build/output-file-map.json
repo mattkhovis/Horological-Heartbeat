@@ -1,0 +1,54 @@
+{
+  "": {
+    "swift-dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/primary.swiftdeps"
+  },
+  "/Users/matthovis/Documents/GitHub/Horological Heartbeat/Sources/HorologicalHeartbeat/ContentView.swift": {
+    "dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/ContentView.d",
+    "object": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/ContentView.swift.o",
+    "swiftmodule": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/ContentView.dia"
+  },
+  "/Users/matthovis/Documents/GitHub/Horological Heartbeat/Sources/HorologicalHeartbeat/DriftStore.swift": {
+    "dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/DriftStore.d",
+    "object": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/DriftStore.swift.o",
+    "swiftmodule": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/DriftStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/DriftStore.swiftdeps",
+    "diagnostics": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/DriftStore.dia"
+  },
+  "/Users/matthovis/Documents/GitHub/Horological Heartbeat/Sources/HorologicalHeartbeat/HorologicalHeartbeatApp.swift": {
+    "dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/HorologicalHeartbeatApp.d",
+    "object": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/HorologicalHeartbeatApp.swift.o",
+    "swiftmodule": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/HorologicalHeartbeatApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/HorologicalHeartbeatApp.swiftdeps",
+    "diagnostics": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/HorologicalHeartbeatApp.dia"
+  },
+  "/Users/matthovis/Documents/GitHub/Horological Heartbeat/Sources/HorologicalHeartbeat/NTPClient.swift": {
+    "dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/NTPClient.d",
+    "object": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/NTPClient.swift.o",
+    "swiftmodule": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/NTPClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/NTPClient.swiftdeps",
+    "diagnostics": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/NTPClient.dia"
+  },
+  "/Users/matthovis/Documents/GitHub/Horological Heartbeat/Sources/HorologicalHeartbeat/PulseView.swift": {
+    "dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/PulseView.d",
+    "object": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/PulseView.swift.o",
+    "swiftmodule": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/PulseView~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/PulseView.swiftdeps",
+    "diagnostics": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/PulseView.dia"
+  },
+  "/Users/matthovis/Documents/GitHub/Horological Heartbeat/Sources/HorologicalHeartbeat/StatsView.swift": {
+    "dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/StatsView.d",
+    "object": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/StatsView.swift.o",
+    "swiftmodule": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/StatsView~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/StatsView.swiftdeps",
+    "diagnostics": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/StatsView.dia"
+  },
+  "/Users/matthovis/Documents/GitHub/Horological Heartbeat/Sources/HorologicalHeartbeat/TimeEngine.swift": {
+    "dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/TimeEngine.d",
+    "object": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/TimeEngine.swift.o",
+    "swiftmodule": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/TimeEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/TimeEngine.swiftdeps",
+    "diagnostics": "/Users/matthovis/Documents/GitHub/Horological Heartbeat/.build/index-build/arm64-apple-macosx/debug/HorologicalHeartbeat.build/TimeEngine.dia"
+  }
+}

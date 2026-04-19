@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Horological Heartbeat}",
+            "name": "Debug HorologicalHeartbeat",
+            "target": "HorologicalHeartbeat",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug HorologicalHeartbeat"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Horological Heartbeat}",
+            "name": "Release HorologicalHeartbeat",
+            "target": "HorologicalHeartbeat",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release HorologicalHeartbeat"
+        }
+    ]
+}

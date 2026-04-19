@@ -1,0 +1,46 @@
+name: HorologicalHeartbeat
+
+options:
+  bundleIdPrefix: com.horologicalheartbeat
+  deploymentTarget:
+    macOS: "14.0"
+  xcodeVersion: "15"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_OPTIMIZATION_LEVEL: "-O"
+
+targets:
+  HorologicalHeartbeat:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+
+    sources:
+      - path: HorologicalHeartbeat
+        excludes:
+          - "*.entitlements"
+
+    info:
+      path: HorologicalHeartbeat/Info.plist
+
+    entitlements:
+      path: HorologicalHeartbeat/HorologicalHeartbeat.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.network.client: true
+
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.horologicalheartbeat.app
+        PRODUCT_NAME: "Horological Heartbeat"
+        INFOPLIST_FILE: HorologicalHeartbeat/Info.plist
+        CODE_SIGN_ENTITLEMENTS: HorologicalHeartbeat/HorologicalHeartbeat.entitlements
+        COMBINE_HIDPI_IMAGES: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+
+    dependencies: []

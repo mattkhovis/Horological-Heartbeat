@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2095CF817A2DC52AB06C6F95 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BF10CAABFE9FA3C7FBFD02 /* MenuBarController.swift */; };
+		3C7F5BE144D0FFB86F497099 /* HorologicalHeartbeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3499B985481F7652980DADB7 /* HorologicalHeartbeatApp.swift */; };
+		40E063308FDBB5FAB75B3ADC /* TimeEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272BC690B3D122F1D15B5A94 /* TimeEngine.swift */; };
+		4755DDEEC433381ADB088832 /* NTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826E636D5396D65344DA16AF /* NTPClient.swift */; };
+		6E6F25E13DE8B96985F5DD45 /* DriftStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B602A42AE3836A5E0180FC /* DriftStore.swift */; };
+		74A115210215923791314A10 /* PulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66723115E326C569BB9388E8 /* PulseView.swift */; };
+		BBF0BEC00B2C33EE17947C88 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94201E79600DDC4968CCC824 /* ContentView.swift */; };
+		CBE65D7511BDCB341CF4B6A3 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6337EC7A5D6E4BB8C6592E2B /* StatsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		10311E910B261739FA769C35 /* HorologicalHeartbeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorologicalHeartbeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21BF10CAABFE9FA3C7FBFD02 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		272BC690B3D122F1D15B5A94 /* TimeEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEngine.swift; sourceTree = "<group>"; };
+		3499B985481F7652980DADB7 /* HorologicalHeartbeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorologicalHeartbeatApp.swift; sourceTree = "<group>"; };
+		46DF010CC045F14C0F307C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6337EC7A5D6E4BB8C6592E2B /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		66723115E326C569BB9388E8 /* PulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseView.swift; sourceTree = "<group>"; };
+		826E636D5396D65344DA16AF /* NTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NTPClient.swift; sourceTree = "<group>"; };
+		94201E79600DDC4968CCC824 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		96B602A42AE3836A5E0180FC /* DriftStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriftStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		2745258DBCD66DE5F0396910 = {
+			isa = PBXGroup;
+			children = (
+				AE2E43A4FFC8F37BFDC1CFA3 /* HorologicalHeartbeat */,
+				6C3F1BF27DAA3522439FE903 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6C3F1BF27DAA3522439FE903 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10311E910B261739FA769C35 /* HorologicalHeartbeat.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE2E43A4FFC8F37BFDC1CFA3 /* HorologicalHeartbeat */ = {
+			isa = PBXGroup;
+			children = (
+				94201E79600DDC4968CCC824 /* ContentView.swift */,
+				96B602A42AE3836A5E0180FC /* DriftStore.swift */,
+				3499B985481F7652980DADB7 /* HorologicalHeartbeatApp.swift */,
+				46DF010CC045F14C0F307C8A /* Info.plist */,
+				21BF10CAABFE9FA3C7FBFD02 /* MenuBarController.swift */,
+				826E636D5396D65344DA16AF /* NTPClient.swift */,
+				66723115E326C569BB9388E8 /* PulseView.swift */,
+				6337EC7A5D6E4BB8C6592E2B /* StatsView.swift */,
+				272BC690B3D122F1D15B5A94 /* TimeEngine.swift */,
+			);
+			path = HorologicalHeartbeat;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8A7D88640FDDB4065F58262 /* HorologicalHeartbeat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 252DD9F30092DBDF8731470C /* Build configuration list for PBXNativeTarget "HorologicalHeartbeat" */;
+			buildPhases = (
+				CDEC54141B83D9B122730057 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HorologicalHeartbeat;
+			packageProductDependencies = (
+			);
+			productName = HorologicalHeartbeat;
+			productReference = 10311E910B261739FA769C35 /* HorologicalHeartbeat.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3713F60A12F6FC863F5A391 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F8A7D88640FDDB4065F58262 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = CAB59DBE8FF77927E89085BA /* Build configuration list for PBXProject "HorologicalHeartbeat" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2745258DBCD66DE5F0396910;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6C3F1BF27DAA3522439FE903 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8A7D88640FDDB4065F58262 /* HorologicalHeartbeat */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDEC54141B83D9B122730057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF0BEC00B2C33EE17947C88 /* ContentView.swift in Sources */,
+				6E6F25E13DE8B96985F5DD45 /* DriftStore.swift in Sources */,
+				3C7F5BE144D0FFB86F497099 /* HorologicalHeartbeatApp.swift in Sources */,
+				2095CF817A2DC52AB06C6F95 /* MenuBarController.swift in Sources */,
+				4755DDEEC433381ADB088832 /* NTPClient.swift in Sources */,
+				74A115210215923791314A10 /* PulseView.swift in Sources */,
+				CBE65D7511BDCB341CF4B6A3 /* StatsView.swift in Sources */,
+				40E063308FDBB5FAB75B3ADC /* TimeEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		29140D32A8C4F8390DE830CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HorologicalHeartbeat/HorologicalHeartbeat.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HorologicalHeartbeat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horologicalheartbeat.app;
+				PRODUCT_NAME = "Horological Heartbeat";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		332ED332563A61CE0EBB4B93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		C9E5EBE4867A883EA3D1BDC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HorologicalHeartbeat/HorologicalHeartbeat.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HorologicalHeartbeat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.horologicalheartbeat.app;
+				PRODUCT_NAME = "Horological Heartbeat";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E2EEF6225157B9D17C658DB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		252DD9F30092DBDF8731470C /* Build configuration list for PBXNativeTarget "HorologicalHeartbeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29140D32A8C4F8390DE830CC /* Debug */,
+				C9E5EBE4867A883EA3D1BDC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CAB59DBE8FF77927E89085BA /* Build configuration list for PBXProject "HorologicalHeartbeat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				332ED332563A61CE0EBB4B93 /* Debug */,
+				E2EEF6225157B9D17C658DB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3713F60A12F6FC863F5A391 /* Project object */;
+}
