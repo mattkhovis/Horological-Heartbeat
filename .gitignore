@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Swift Package Manager build artifacts
+.build/
+
+# Xcode user-specific data
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+**/xcuserdata/
+
+# Derived/intermediate outputs
+DerivedData/
+dist/
