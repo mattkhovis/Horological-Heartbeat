@@ -62,11 +62,14 @@ final class TimeEngine: ObservableObject {
 
     private var machTimer: Timer?
     private var ntpTimer: Timer?
+    private var isRunning = false
     private let backgroundQueue = DispatchQueue(label: "com.horologicalheartbeat.engine", qos: .userInitiated)
 
     // MARK: - Lifecycle
 
     func start() {
+        guard !isRunning else { return }
+        isRunning = true
         captureCalibrationAnchor()
 
         // Sample every 1 second — fast enough to see micro-fluctuations,
@@ -85,6 +88,8 @@ final class TimeEngine: ObservableObject {
     }
 
     func stop() {
+        guard isRunning else { return }
+        isRunning = false
         machTimer?.invalidate()
         ntpTimer?.invalidate()
     }

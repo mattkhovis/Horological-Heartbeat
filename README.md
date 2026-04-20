@@ -61,7 +61,7 @@ Horological Heartbeat is a macOS menu bar application that brings the precision 
 ## 🛠️ Building from Source
 1. **Clone the Repository**:
    ```sh
-   git clone https://github.com/yourusername/HorologicalHeartbeat.git
+   git clone https://github.com/mattkhovis/HorologicalHeartbeat.git
    ```
 2. **Open in Xcode**:
    - Open `HorologicalHeartbeat.xcodeproj`.

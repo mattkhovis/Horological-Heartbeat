@@ -14,10 +14,6 @@ struct HorologicalHeartbeatApp: App {
                     timeEngine.start()
                     menuBar.start(engine: timeEngine)
                 }
-                .onDisappear {
-                    timeEngine.stop()
-                    menuBar.stop()
-                }
         }
         .windowStyle(.hiddenTitleBar)
         .windowResizability(.contentSize)
