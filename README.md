@@ -5,8 +5,8 @@ Horological Heartbeat is a macOS menu bar application that brings the precision 
 ---
 
 ## 📸 Screenshots
-![Horological Heartbeat main stats view](https://github.com/user-attachments/assets/69919cb4-7569-4bcf-be52-9105e0cf6647)
-![Horological Heartbeat secondary view](https://github.com/user-attachments/assets/17c70b8e-e81c-429d-89f5-29e06b53978e)
+![Clock Accuracy Monitor chart with drift statistics in Horological Heartbeat](https://github.com/user-attachments/assets/69919cb4-7569-4bcf-be52-9105e0cf6647)
+![Additional Horological Heartbeat app interface screenshot](https://github.com/user-attachments/assets/17c70b8e-e81c-429d-89f5-29e06b53978e)
 
 ---
 
