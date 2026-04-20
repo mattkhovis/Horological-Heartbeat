@@ -58,8 +58,7 @@ Horological Heartbeat is a macOS menu bar application that brings the precision 
 ## 📦 Standalone Distribution (No Xcode Required for Users)
 - **End users do not need Xcode**. They can install the notarized `.dmg` release artifact directly.
 - **Xcode is only required for development/building from source**.
-- Maintainers can publish signed, notarized releases through GitHub Actions.
-- See `RELEASE_SETUP.md` for one-time signing/notarization setup and tag-based release steps.
+- Maintainers can publish releases through GitHub Actions using tag-based releases.
 
 ---
 
