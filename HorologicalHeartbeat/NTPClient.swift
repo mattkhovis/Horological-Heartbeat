@@ -39,8 +39,11 @@ final class NTPClient: @unchecked Sendable {
 
         // Track whether we've already called completion so we never call it twice,
         // regardless of which error/timeout/success path fires first.
+        let lock = NSLock()
         var completed = false
         let completionOnce: (Result<NTPResult, Error>) -> Void = { result in
+            lock.lock()
+            defer { lock.unlock() }
             guard !completed else { return }
             completed = true
             completion(result)

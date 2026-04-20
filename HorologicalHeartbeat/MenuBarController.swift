@@ -48,6 +48,7 @@ final class MenuBarController: NSObject, ObservableObject {
     // MARK: - Lifecycle
 
     func start(engine: TimeEngine) {
+        guard statusItem == nil else { return }
         self.engine = engine
 
         statusItem = NSStatusBar.system.statusItem(withLength: iconWidth)
@@ -201,7 +202,14 @@ final class MenuBarController: NSObject, ObservableObject {
 
     @objc private func handleClick() {
         NSApp.activate(ignoringOtherApps: true)
-        NSApp.windows.first(where: { $0.canBecomeMain })?.makeKeyAndOrderFront(nil)
+        if let window = NSApp.windows.first(where: { $0.canBecomeMain }) {
+            window.makeKeyAndOrderFront(nil)
+        } else {
+            // Window was destroyed by SwiftUI; request a new one.
+            if #available(macOS 13.0, *) {
+                NSApp.sendAction(Selector(("newWindowForTab:")), to: nil, from: nil)
+            }
+        }
     }
 }
 
