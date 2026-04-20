@@ -4,6 +4,11 @@ Horological Heartbeat is a macOS menu bar application that brings the precision 
 
 ---
 
+## 📸 Screenshot
+![Clock Accuracy Monitor chart with drift statistics in Horological Heartbeat](https://github.com/user-attachments/assets/69919cb4-7569-4bcf-be52-9105e0cf6647)
+
+---
+
 ## ✨ Why Horological Heartbeat is Cool
 - **Mechanical Watch Aesthetics**: Emulates the pulse and rhythm of a mechanical watch, offering a meditative and visually pleasing experience.
 - **Menu Bar Integration**: Sits unobtrusively in your menu bar, always accessible without cluttering your workspace.
