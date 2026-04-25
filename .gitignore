@@ -13,3 +13,6 @@
 # Derived/intermediate outputs
 DerivedData/
 dist/
+
+# Editor settings
+.vscode/
